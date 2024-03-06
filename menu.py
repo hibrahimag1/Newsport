@@ -30,7 +30,7 @@ def make_theme_window(number: int):
     l = [[sg.Column(lst, scrollable=True, pad=(0,0), size=WINDOW_SIZE, vertical_scroll_only=True)]]
     return l
 
-pozdrav = "Dobro došli na newsport, vaš personalni izbornik vijesti"
+pozdrav = "Dobro došli na Newsport, vaš personalni izbornik vijesti"
 pitanje = "O čemu želite čitati danas?"
 col1 = [  [sg.Text(pozdrav, enable_events=True, key="-TITLE-", font=("Constantia", 24), pad=((0,0), (150, 50)))] ]
 col2 = [  [sg.Text(pitanje, enable_events=True, key="-SUBTIE2-", font=("Constantia", 18), pad=((0,0), (0, 150)))] ]
