@@ -68,7 +68,6 @@ l8 = make_theme_window(8)
 l9 = make_theme_window(9)
 #l10 = make_theme_window(10)
 
-
 '''l2 = [[sg.Text("Ovo je za Kulturu"), sg.Button("Nazad", key='-BTN2-')]]
 l3 = [[sg.Text("Ovo je za Zabavu"), sg.Button("Nazad", key='-BTN3-')]]
 l4 = [[sg.Text("Ovo je za Politiku"), sg.Button("Nazad", key='-BTN4-')]]
@@ -94,12 +93,10 @@ layout = [
             sg.Column(l10, visible=False, key='-COL10-')]
         ]
 
-
 window = sg.Window("Newsport", layout, size=WINDOW_SIZE, finalize = True)
 
 for url in ALL_URLS:
     window[f'URL {url}'].set_cursor("hand2")
-
 
 TEME = {}
 for i,v in enumerate("ZENICA KULTURA ZABAVA POLITIKA BIZNIS LJUDI INFO CRNAHRONIKA SPORT LICNO".split(), 1):
@@ -125,12 +122,4 @@ while True:
     elif event.startswith("URL "):
         webbrowser.open(event.split(' ')[1])
 
-
-
-
 window.close()
-
-'''Garbage code:
-l1 = [*[*make_article_element(i) for i in clanci_zenica], [sg.Button("Nazad", key='-BTN1-')]]
-
-'''
